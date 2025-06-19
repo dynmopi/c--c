@@ -20,6 +20,13 @@ int main(){
 
     }
 
-    printf("A soma total de %.lf valores é %.lf.", i, soma);
+
+    printf("A quantidade de números somados é de: %.lf\n", i);
+    if(i>0){
+        printf("A quantidade é maior que zero");
+    } else {
+        printf("A quantidade não é maior que zero");
+    }
+
     return 0;
 }
