@@ -56,7 +56,7 @@ int main(void){
                         D[i] = A[i] / B[i];
                         break;
             }
-
+                printf("Antes desse break");
                 break;
             }
             system("cls");
