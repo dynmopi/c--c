@@ -29,9 +29,9 @@ int main(void){
             printf("[%d]: ", i);
             scanf("%d", &operacao);
 
-            printf("%d\n", C[operacao]);
+           // printf("%d\n", C[operacao]);
 
-            if(operacao >= 0 && operacao <=3){
+            if(C[operacao] >= 0 && C[operacao] <=3){
                 switch(C[operacao]) {
                     case 0:
                         E[i] = C[operacao];
@@ -47,6 +47,12 @@ int main(void){
                         break;
                     case 3:
                         E[i] = C[operacao];
+                        while(B[i] == 0){
+                            system("cls");
+                            printf("[ERRO], nao e possivel dividir por 0\n");
+                            printf("Digite um outro valor para: B[%d] \n", i);
+                            scanf("%lf", &B[i]);
+                        }
                         D[i] = A[i] / B[i];
                         break;
             }
@@ -65,16 +71,16 @@ int main(void){
     for(int i = 0; i <= 10; i++){
         switch(E[i]){
             case 0:
-                printf("A[%d] %.2lf + B[%d] %.2lf = %.2lf\n", i, A[i], i, B[i], D[i]);
+                printf("A[%d]: %.2lf + B[%d]: %.2lf = %.2lf\n", i, A[i], i, B[i], D[i]);
                 break;
             case 1:
-                printf("A[%d] %.2lf - B[%d] %.2lf = %.2lf\n", i, A[i], i, B[i], D[i]);
+                printf("A[%d]: %.2lf - B[%d]: %.2lf = %.2lf\n", i, A[i], i, B[i], D[i]);
                 break;
             case 2:
-                printf("A[%d] %.2lf * B[%d] %.2lf = %.2lf\n", i, A[i], i, B[i], D[i]);
+                printf("A[%d]: %.2lf * B[%d]: %.2lf = %.2lf\n", i, A[i], i, B[i], D[i]);
                 break;
             case 3:
-                printf("A[%d] %.2lf / B[%d] %.2lf = %.2lf\n", i, A[i], i, B[i], D[i]);
+                printf("A[%d]: %.2lf / B[%d]: %.2lf = %.2lf\n", i, A[i], i, B[i], D[i]);
                 break;
         }
 
