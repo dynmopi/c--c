@@ -4,8 +4,9 @@
 int main(void){
     double A[10];
     double B[10];
-    int C[4];
+    int C[4] = {0, 1, 2, 3};
     double D[10];
+    int E[10];
 
     for(int i = 0; i <= 10; i++){
         printf("Digite o valor de A[%d]: ", i);
@@ -28,18 +29,24 @@ int main(void){
             printf("[%d]: ", i);
             scanf("%d", &operacao);
 
+            printf("%d\n", C[operacao]);
+
             if(operacao >= 0 && operacao <=3){
                 switch(C[operacao]) {
                     case 0:
+                        E[i] = C[operacao];
                         D[i] = A[i] + B[i];
                         break;
                     case 1:
+                        E[i] = C[operacao];
                         D[i] = A[i] - B[i];
                         break;
                     case 2:
+                        E[i] = C[operacao];
                         D[i] = A[i] * B[i];
                         break;
                     case 3:
+                        E[i] = C[operacao];
                         D[i] = A[i] / B[i];
                         break;
             }
@@ -56,18 +63,18 @@ int main(void){
 
     // aqui que eu preciso alterar!
     for(int i = 0; i <= 10; i++){
-        switch(operacao){
+        switch(E[i]){
             case 0:
-                printf("A[%d] + B[%d] = %.2lf\n", i, i, D[i]);
+                printf("A[%d] %.2lf + B[%d] %.2lf = %.2lf\n", i, A[i], i, B[i], D[i]);
                 break;
             case 1:
-                printf("A[%d] - B[%d] = %.2lf\n", i, i, D[i]);
+                printf("A[%d] %.2lf - B[%d] %.2lf = %.2lf\n", i, A[i], i, B[i], D[i]);
                 break;
             case 2:
-                printf("A[%d] * B[%d] = %.2lf\n", i, i, D[i]);
+                printf("A[%d] %.2lf * B[%d] %.2lf = %.2lf\n", i, A[i], i, B[i], D[i]);
                 break;
             case 3:
-                printf("A[%d] / B[%d] = %.2lf\n", i, i, D[i]);
+                printf("A[%d] %.2lf / B[%d] %.2lf = %.2lf\n", i, A[i], i, B[i], D[i]);
                 break;
         }
 

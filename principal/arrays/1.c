@@ -13,5 +13,5 @@ int main(void){
     printf("nota[3] = %.1f \n", notas[3]);
     printf("nota[4] = %.1f \n", notas[4]);
 
-    return 0;
+    return (0);
 }
