@@ -1,5 +1,8 @@
 #include <stdio.h>
+#include <locale.h>
+
 int main(){
+    setlocale(LC_ALL, "pt-br");
     int matriz[2][2], i, j, k;
 
     printf("Digite o valor para os elementos da matriz\n");
