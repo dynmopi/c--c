@@ -21,6 +21,7 @@ int main(void){
 
     }
     system("cls");
+    system("clear");
     printf("0 - Soma\n1 - Subtracao \n2 - Produto \n3 - Divisao\n");
 
     int operacao;
